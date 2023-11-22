@@ -109,7 +109,7 @@ body{
 .cent{
 	position: relative;
 	top: auto;
-	left: 50%;
+	left: auto;
 }
 	
 .para::after{
