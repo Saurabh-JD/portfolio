@@ -111,10 +111,18 @@ body {
   text-shadow: 0px 14px 13px var(--shadow);
 }
 
+.middle-para-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .middle-para {
   color: var(--darkgray);
   padding: 20px;
   text-indent: 30px;
+  width: 150vh;
+  text-align: center;
 }
 
 .para {
