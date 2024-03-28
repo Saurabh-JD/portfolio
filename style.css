@@ -93,7 +93,7 @@ body {
   position: absolute;
   width: 250px;
   height: 250px;
-  background-image: url('https://media.licdn.com/dms/image/D5603AQGA9HwgYr7sGg/profile-displayphoto-shrink_800_800/0/1681549601083?e=2147483647&v=beta&t=SJeULg4C2MlvLKWF1CX2XXqQyY6eyZL5JJltbCInrFE');
+  background-image: url('https://amedia.licdn.com/dms/image/D5603AQGA9HwgYr7sGg/profile-displayphoto-shrink_800_800/0/1681549601083?e=2147483647&v=beta&t=SJeULg4C2MlvLKWF1CX2XXqQyY6eyZL5JJltbCInrFE');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -127,13 +127,13 @@ body {
 
 .para {
   margin-left: 25px;
-
 }
 
 .cent {
-  position: relative;
-  top: auto;
-  left: auto;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	align-items:center;
 }
 
 .para::after {
@@ -144,14 +144,12 @@ body {
   background: var(--white);
   margin-left: -15px;
   animation: dot 1s infinite;
-
 }
 
 @keyframes dot {
   from {
     margin-left: -15px;
   }
-
   to {
     margin-left: 0px;
   }
@@ -170,7 +168,6 @@ body {
   from {
     rotate: 360deg;
   }
-
   to {
     rotate: 0deg;
   }
@@ -178,7 +175,8 @@ body {
 
 /*contact_us*/
 .contact-us-box {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
+  box-shadow: 0px 0px 25px 0px black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,6 +210,13 @@ body {
   grid-row-start: 1;
   grid-row-end: 4;
   height: 100%;
+}
+
+.contact-us-box .input-five {
+	padding:10px;
+	margin:2px;
+	border:none;
+	background-color:var(--lightgray);
 }
 
 ::placeholder {
@@ -255,7 +260,6 @@ footer {
 
 .footer-icon p {
   width: fit-content;
-
 }
 
 .footer-div {
@@ -263,7 +267,6 @@ footer {
 }
 
 .footer-icon ul li {
-
   list-style: none;
 }
 
@@ -276,4 +279,64 @@ footer {
 
 .footer-icon ul li a i {
   font-size: 2rem;
+}
+
+.footer-icon ul li:hover:nth-child(1){
+	background: -webkit-linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.footer-icon ul li:hover:nth-child(2){
+	background: #4267B2;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.footer-icon ul li:hover:nth-child(3){
+	background: #0077b5;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.footer-icon ul li:hover:nth-child(4){
+	background: #24292e;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Media queries for responsiveness */
+
+/* For smaller devices, adjust padding and font size */
+@media only screen and (max-width: 768px) {
+  .menu li {
+    padding: 10px 5px;
+  }
+  
+  .logo {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .contact-us-box h1 {
+    padding: 20px;
+    font-size: 4rem;
+  }
+}
+
+/* For even smaller devices, further adjust padding and font size */
+@media only screen and (max-width: 480px) {
+  .menu li {
+    padding: 5px 2px;
+  }
+  
+  .logo {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+
+  .contact-us-box h1 {
+    padding: 10px;
+    font-size: 3rem;
+  }
 }
